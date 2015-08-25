@@ -1,0 +1,75 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Bienvenido"
+        android:id="@+id/label"
+        android:layout_gravity="center_vertical"
+        android:textSize="20dp" />
+
+    <EditText
+        android:id="@+id/etTextHint"
+        android:gravity="top"
+        android:inputType="textMultiLine"
+        android:lines="1"
+        android:layout_width="324dp"
+        android:layout_height="wrap_content"
+        android:hint="MAC" />
+
+    <Button
+        android:layout_width="382dp"
+        android:layout_height="wrap_content"
+        android:text="Conectar"
+        android:id="@+id/open"
+        android:layout_gravity="right" />
+
+    <Button
+        android:id="@+id/btSpeak"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="speak"
+
+        android:text="Habla"
+        tools:context=".VoiceRecognitionActivity" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Cerrar"
+        android:id="@+id/close"
+        android:layout_gravity="center_horizontal" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Status"
+        android:id="@+id/statusText"
+        android:layout_gravity="center_horizontal"
+        android:textSize="17dp" />
+
+    <Spinner
+        android:id="@+id/sNoOfMatches"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:entries="@array/saNoOfMatches"
+        android:prompt="@string/sNoOfMatches"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/tvTextMatches"
+        android:textStyle="bold" />
+
+    <ListView
+        android:id="@+id/lvTextMatches"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>
